@@ -5,3 +5,57 @@
   padding: 0;
   margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li{
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+ul,
+li{
+  display: flex;
+}
+
+/* Start */
+
+/* NavBar */
+.navbar-container{
+  background-color: antiquewhite;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-ul{
+  justify-content: flex-end;
+  gap: 1.8rem;
+}
+
+#menu{
+  display: none;
+}
+
+.navbar-mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-ul{
+    display: none;
+  }
+  #menu{
+    display: flex;
+  }
+}
