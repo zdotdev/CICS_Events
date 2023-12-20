@@ -1,3 +1,7 @@
-.test {
-  color: red;
+*,
+*::after,
+*::before{
+  content: none;
+  padding: 0;
+  margin: 0;
 }
