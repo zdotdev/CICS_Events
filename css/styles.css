@@ -31,6 +31,9 @@ li{
 
 /* NavBar */
 .navbar-container{
+  position: absolute;
+  z-index: -10;
+  width: 100%;
   background-color: antiquewhite;
   padding: 1.2rem 2rem;
   display: flex;
@@ -49,6 +52,15 @@ li{
 
 .navbar-mobile{
   display: none;
+}
+
+#mobileMenuContainer{
+  position: fixed;
+  z-index: 10;
+  background-color: aqua;
+  right: -10rem;
+  width: 40%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
