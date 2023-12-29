@@ -6,6 +6,13 @@
   margin: 0;
 }
 
+html,
+body{
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -30,44 +37,64 @@ li{
 /* Start */
 
 /* NavBar */
-.navbar-container{
-  position: absolute;
-  z-index: -10;
+
+header{
   width: 100%;
-  background-color: antiquewhite;
-  padding: 1.2rem 2rem;
+}
+
+.navbar-container{
+  padding: .4rem 0rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: antiquewhite;
   align-items: center;
 }
 
-.navbar-ul{
-  justify-content: flex-end;
-  gap: 1.8rem;
+.navbar-container a{
+  font-size: 2rem;
 }
-
+.msc-logo{
+  padding-left: .8rem;
+}
 #menu{
-  display: none;
+  padding-right: .8rem;
 }
 
-.navbar-mobile{
-  display: none;
+.navbar-ul{
+  display: flex;
+  gap: 4rem;
 }
 
-#mobileMenuContainer{
+.navbar-ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.menu-container{
+  padding: 2rem 4rem;
   position: fixed;
-  z-index: 10;
-  background-color: aqua;
-  right: -10rem;
-  width: 40%;
+  z-index: 2;
+  width: 40rem;
   height: 100%;
+  right: calc(-48rem);
+  top: 0;
+  background-color: aqua;
+  transition: 300ms;
 }
-
-@media only screen and (max-width: 768px) {
-  .navbar-ul{
-    display: none;
-  }
-  #menu{
-    display: flex;
-  }
+.menu-container.active{
+  right: calc(-48rem + 48rem);
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #3e331954;
+  display: none;
+}
+.cover.active{
+  display: block;
 }
