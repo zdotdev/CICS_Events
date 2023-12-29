@@ -126,3 +126,42 @@ header{
   height: 22rem;
   border-radius: .4rem;
 }
+
+.body.scroll-off{
+  overflow: hidden;
+}
+/* Table (Portrait) */
+@media only screen and (max-width: 1024px) {
+  /* navbar */
+  .menu-container{
+    width: 30rem;
+  }
+}
+/* Tablet (Landscape) */
+@media only screen and (max-width: 768px) {
+  /* navbar */
+  .menu-container{
+    padding: 1.8rem 2.8rem;
+    width: 20rem;
+  }
+  .navbar-ul a{
+    font-size: 1.4rem;
+  }
+  .navbar-menu-figure img{
+    height: 14rem;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 480px) {
+  /* navbar */
+  .menu-container{
+    padding: 1.4rem 2.4rem;
+    width: 10rem;
+  }
+  .navbar-ul a{
+    font-size: 1rem;
+  }
+  .navbar-menu-figure{
+    display: none;
+  }
+}
