@@ -113,7 +113,15 @@ header{
   display: block;
 }
 
-.navbar-image img{
+.navbar-menu-figure{
+  margin: 1.8rem 0rem;
+}
+
+.navbar-menu-figure figcaption{
+  margin: .8rem 0rem;
+}
+
+.navbar-menu-figure img{
   width: 100%;
   height: 22rem;
   border-radius: .4rem;
