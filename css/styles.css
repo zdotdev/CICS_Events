@@ -69,7 +69,20 @@ header{
 .navbar-ul{
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: .8rem;
+}
+
+.navbar-ul a{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#close-button{
+  font-size: 1.4rem;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
 
 .menu-container{
