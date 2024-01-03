@@ -50,11 +50,25 @@ function showMonth(){
 
   const monthsList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   document.getElementById("show-month").innerHTML = monthsList[month.getMonth()];
-  document.getElementById("show-event-month").innerHTML = monthsList[month.getMonth()];
+};
+
+function carousel(){
+  const slideButtons = document.querySelectorAll(".slide-button");
+  const eventList = document.querySelector(".clientEvents");
+
+  slideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const direction = button.id === "prev-slide" ? -1 : 1;
+
+      const scrollAmount = eventList.clientWidth * direction;
+      eventList.scrollBy({ left: scrollAmount, behavior: "smooth"});
+    });
+  });
 };
 
 window.onload = () => {
   loadAllEvents();
   menu();
   showMonth();
+  carousel();
 };
