@@ -214,13 +214,39 @@ h6{
   width: 80%;
 }
 
-/* new and announcements */
+/* news and announcements */
 .faculty-title,
 .cicsso-officers-title,
 .events-title,
 .news-and-announcement-title{
   font-size: 4rem;
   padding: 2rem 4rem;
+}
+
+.news-and-announcement-container{
+  padding-bottom: 4rem;
+}
+.content-container{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.news-field{
+  margin: 0rem 4rem;
+}
+
+.news-field-title,
+.announcement-field-title{
+  margin-bottom: .8rem;
+  font-size: 2.8rem;
+  color: var(--neutral-500);
+}
+
+.announcement-field{
+  margin: 0rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 /* events */

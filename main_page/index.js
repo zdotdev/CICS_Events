@@ -47,8 +47,10 @@ function menu (){
 
 function showMonth(){
   const month = new Date();
+
   const monthsList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  document.getElementById('show-month').innerHTML = monthsList[month.getMonth()];
+  document.getElementById("show-month").innerHTML = monthsList[month.getMonth()];
+  document.getElementById("show-event-month").innerHTML = monthsList[month.getMonth()];
 };
 
 window.onload = () => {
