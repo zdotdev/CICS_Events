@@ -3,7 +3,7 @@
 ## Installations
 
 1. Open Terminal
-2. `git clone https://github.com/dimaliwatkent/cics-events.git`
+2. `git clone https://github.com/zdotdev/cics-events.git`
 3. `cd cics-events`
 4. `npm install`
 
