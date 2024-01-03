@@ -220,9 +220,72 @@ h6{
 .events-title,
 .news-and-announcement-title{
   font-size: 4rem;
-  margin: 2rem 4rem;
+  padding: 2rem 4rem;
 }
 
+/* events */
+.events-container{
+  background-color: var(--neutral-100);
+  padding-bottom: 4rem;
+}
+.clientEvents{
+  display: flex;
+  gap: 2rem;
+  padding: 0rem 4rem;
+}
+.event-card{
+  height: 32rem;
+  width: 28rem;
+  background-image: url(/main_page/assets/img/402650413_767803438697506_5375373139063542753_n.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .8rem;
+}
+
+.event-card-background-filter{
+  border-radius: .8rem;
+  background-image:linear-gradient(200deg, transparent, hsl(144, 42%, 35%));
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  backdrop-filter: blur(2px) saturate(200%);
+  -webkit-backdrop-filter: blur(1px) saturate(200%);
+}
+
+.event-card-title{
+  font-size: 2.8rem;
+  margin-bottom: .8rem;
+  margin:0rem 1.2rem;
+  color: white;
+  text-decoration: underline;
+}
+
+.event-card-info{
+  margin: 0rem 1.2rem;
+  color: white;
+}
+
+.event-card-list li{
+  display: flex;
+}
+
+.event-card-date{
+  margin: 0rem 1.2rem;
+  color: white;
+}
+
+.event-card-participants{
+  margin: 0rem 1.2rem;
+  color: white;
+}
+
+.event-card-state{
+  margin: 0rem 1.2rem;
+  color: white;
+}
 
 /* footer */
 .footer-container{
