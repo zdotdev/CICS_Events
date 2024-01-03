@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="/">go to client</a>
+
+    <dialog id="addEvent">
+      <form id="eventForm">
+        <label for="eventName">Event Name:</label><br />
+        <input type="text" id="eventName" name="eventName" /><br />
+        <label for="eventDescription">Event Description:</label><br />
+        <textarea id="eventDescription" name="eventDescription"></textarea
+        ><br />
+        <label for="eventDate">Event Date:</label><br />
+        <input type="date" id="eventDate" name="eventDate" /><br />
+        <label for="location">Location:</label><br />
+        <input type="text" id="location" name="location" /><br />
+        <label for="participants">Participants:</label><br />
+        <input type="text" id="participants" name="participants" /><br />
+        <label for="organizers">Organizers:</label><br />
+        <input type="text" id="organizers" name="organizers" /><br />
+        <label for="registrationDeadline">Registration Deadline:</label><br />
+        <input
+          type="date"
+          id="registrationDeadline"
+          name="registrationDeadline"
+        /><br />
+        <label for="image">Image:</label><br />
+        <input type="file" id="image" name="image" accept="image/*" /><br />
+        <input
+          type="hidden"
+          id="archived"
+          name="archived"
+          value="false"
+        /><br />
+        <label for="state">State:</label><br />
+        <input type="text" id="state" name="state" /><br />
+        <button id="cancelButton">Cancel</button>
+        <button type="submit" id="saveButton">Save</button>
+      </form>
+    </dialog>
+
+    <button id="addEventBtn">Add Event</button>
+    <h1>All Events</h1>
+    <div id="allEvents"></div>
+
+    <dialog id="editEvent">
+      <form id="editEventForm">
+        <label for="eventName">Event Name:</label><br />
+        <input type="text" id="eventNameEdit" name="eventName" /><br />
+        <label for="eventDescription">Event Description:</label><br />
+        <textarea id="eventDescriptionEdit" name="eventDescription"></textarea
+        ><br />
+        <label for="eventDate">Event Date:</label><br />
+        <input type="date" id="eventDateEdit" name="eventDate" /><br />
+        <label for="location">Location:</label><br />
+        <input type="text" id="locationEdit" name="location" /><br />
+        <label for="participants">Participants:</label><br />
+        <input type="text" id="participantsEdit" name="participants" /><br />
+        <label for="organizers">Organizers:</label><br />
+        <input type="text" id="organizersEdit" name="organizers" /><br />
+        <label for="registrationDeadline">Registration Deadline:</label><br />
+        <input
+          type="date"
+          id="registrationDeadlineEdit"
+          name="registrationDeadline"
+        /><br />
+        <label for="image">Image:</label><br />
+        <input type="file" id="imageEdit" name="image" accept="image/*" /><br />
+        <input
+          type="hidden"
+          id="archivedEdit"
+          name="archived"
+          value="false"
+        /><br />
+        <label for="state">State:</label><br />
+        <input type="text" id="stateEdit" name="state" /><br />
+
+        <button id="cancelButtonEdit">Cancel</button>
+        <button type="submit" id="saveButtonEdit">Save</button>
+      </form>
+    </dialog>
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>
