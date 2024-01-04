@@ -148,6 +148,17 @@ h6{
 }
 
 /* Hero */
+a.arrow-up{
+  position: fixed;
+  z-index: 3;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--neutral-700);
+  color: var(--neutral-100);
+  opacity: 50%;
+  border-radius: 50%;
+  font-size: 4rem;
+}
 .hero{
   width: 100%;
   height: auto;
@@ -336,9 +347,11 @@ h6{
   margin: 0rem 1.8rem;
   color: white;
 }
-
-#next-slide,
-#prev-slide{
+#next-slide{
+  display: none;
+}
+#next-slide.active,
+#prev-slide.active{
   position: absolute;
   z-index: 2;
   display: flex;
@@ -350,10 +363,10 @@ h6{
   height: 4rem;
   width: 2rem;
 }
-#next-slide{
+#next-slide.active{
   right: 1.8rem;
 }
-#prev-slide{
+#prev-slide.active{
   left: 1.8rem;
 }
 
