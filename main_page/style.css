@@ -75,8 +75,22 @@ h6{
 }
 .navbar a{
   color: var(--neutral-100);
+  font-size: 2rem;
+  
 }
-
+.navbar-img-container{
+  line-height: 0;
+}
+.cics-logo,
+.msc-logo{
+  height: auto;
+  width: 2.8rem;
+  line-height: 0%;
+}
+#menu-button{
+  display: flex;
+  align-items: center;
+}
 /* menu */
 .menu-container{
   height: 100vh;
@@ -255,9 +269,11 @@ h6{
   padding-bottom: 4rem;
 }
 .clientEvents{
-  display: flex;
   gap: 2rem;
   padding: 0rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow-x: hidden;
 }
 .event-card{
   height: 32rem;
@@ -285,7 +301,6 @@ h6{
   font-size: 2.8rem;
   margin: 0rem 1.8rem;
   color: white;
-  text-decoration: underline;
 }
 
 .event-card-info{
@@ -298,18 +313,48 @@ h6{
   display: flex;
 }
 
-.event-card-date-and-state{
+.event-card-date{
   margin: 0rem 1.8rem;
   padding-right: 8rem;
   margin-bottom: .4rem;
   color: white;
-  display: flex;
-  justify-content: space-between;
+}
+.event-card-title.ongoing::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(0, 255, 0);
+}
+.event-card-title.postponed::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(128, 128, 128);
 }
 .event-card-participants{
   padding-bottom: .8rem;
   margin: 0rem 1.8rem;
   color: white;
+}
+
+#next-slide,
+#prev-slide{
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 10%, 0.517);
+  color: var(--neutral-100);
+  border: none;
+  height: 4rem;
+  width: 2rem;
+}
+#next-slide{
+  right: 1.8rem;
+}
+#prev-slide{
+  left: 1.8rem;
 }
 
 /* footer */
@@ -331,30 +376,4 @@ h6{
   align-items: center;
   padding: 4rem 0rem;
   background-color: var(--primary-800);
-}
-
-/* carousel */
-.clientEvents{
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  overflow-x: hidden;
-}
-#next-slide,
-#prev-slide{
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  align-self: center;
-  align-items: center;
-  background-color: hsla(0, 0%, 10%, 0.517);
-  color: var(--neutral-100);
-  border: none;
-  height: 4rem;
-  width: 2rem;
-}
-#next-slide{
-  right: 1.8rem;
-}
-#prev-slide{
-  left: 1.8rem;
 }

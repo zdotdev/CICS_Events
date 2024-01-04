@@ -27,7 +27,7 @@ function loadAllEvents() {
 
 function menu (){
   const menuButton = document.getElementById('menu-button');
-  const closeMenuButton = document.getElementById('close-button');
+  const closeMenuButton = document.getElementById("close-button");
   const backgroundCoverField = document.getElementById('background-cover-field');
   const menuContainerField = document.getElementById('menu-container-field');
   const removeBodyOverflow = document.getElementById('body');
@@ -38,7 +38,7 @@ function menu (){
     removeBodyOverflow.classList.toggle('inactive');
   };
   
-  closeMenuButton.onclick = function () {
+  closeMenuButton.onclick =  function () {
     backgroundCoverField.classList.remove('active');
     menuContainerField.classList.remove('active');
     removeBodyOverflow.classList.remove('inactive');
