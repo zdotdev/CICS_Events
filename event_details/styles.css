@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after{
+  content: none;
+}
+
+:root{
+  --primary-800: hsl(144, 42%, 35%);
+  --primary-700: hsl(144, 42%, 45%);
+  --primary-600: hsl(144, 42%, 55%);
+  --primary-500: hsl(144, 42%, 65%);
+  --primary-400: hsl(144, 42%, 75%);
+  --primary-300: hsl(144, 42%, 85%);
+  --secondary-500: hsl(106, 100%, 87%);
+  --neutral-900: hsl(0, 0%, 10%);
+  --neutral-800: hsl(0, 0%, 20%);
+  --neutral-700: hsl(0, 0%, 30%);
+  --neutral-600: hsl(0, 0%, 40%);
+  --neutral-500: hsl(0, 0%, 50%);
+  --neutral-400: hsl(0, 0%, 60%);
+  --neutral-300: hsl(0, 0%, 70%);
+  --neutral-200: hsl(0, 0%, 80%);
+  --neutral-100: hsl(0, 0%, 90%);
+}
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: 300ms;
+  scroll-behavior: smooth;
+}
+
+figure,
+figcaption,
+ul,
+li{
+  padding: 0;
+  margin: 0;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  color: var(--neutral-900);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* navbar */
+.navbar-container{
+    position: relative;
+    z-index: 1;
+    background-color: var(--neutral-800);
+  }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4rem;
+    padding: .8rem 0;
+  }
+.navbar > li{
+    display: flex;
+  }
+.navbar a{
+    color: var(--neutral-100);
+    font-size: 2rem;
+    
+    }
+
+  .navbar-img-container{
+    line-height: 0;
+  }
+
+  .cics-logo,
+  .msc-logo{
+    height: auto;
+    width: 2.8rem;
+    line-height: 0%;
+  }
+  #menu-button{
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* footer */
+.footer-container{
+    height: fit-content;
+    width: 100%;
+  }
+  .footer-title{
+    font-size: 4rem;
+  }
+  
+  .footer-text-field{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    padding: 4rem 0rem;
+    background-color: var(--primary-800);
+  }
+  
