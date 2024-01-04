@@ -14,3 +14,4 @@
 ## Live Site
 
 - [Firebase Live Site](https://cics-events.web.app/)
+- [Github Pages](https://zdotdev.github.io/CICS-Events/)
