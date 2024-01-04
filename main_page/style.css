@@ -289,7 +289,6 @@ a.arrow-up{
 .event-card{
   height: 32rem;
   width: 28rem;
-  background-image: url(/main_page/assets/img/402650413_767803438697506_5375373139063542753_n.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -334,13 +333,25 @@ a.arrow-up{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
-  color: rgb(0, 255, 0);
+  color: rgb(255, 191, 0);
 }
 .event-card-title.Postponed::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
-  color: rgb(128, 128, 128);
+  color: rgb(255, 0, 0);
+}
+.event-card-title.Done::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(13, 255, 0);
+}
+.event-card-title.Upcoming::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(0, 47, 255);
 }
 .event-card-participants{
   padding-bottom: .8rem;

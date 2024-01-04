@@ -15,6 +15,7 @@ function loadAllEvents() {
 
     const eventElement = document.createElement("div");
     eventElement.classList.add("event-card");
+    eventElement.style.backgroundImage = `url(${event.image})`;
     eventElement.innerHTML = `
     <div class="event-card-background-filter">
     <h2 class="event-card-title ${event.state}">${event.eventName}</h2>
