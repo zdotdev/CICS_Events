@@ -17,10 +17,10 @@ function loadAllEvents() {
     eventElement.classList.add("event-card");
     eventElement.innerHTML = `
     <div class="event-card-background-filter">
-    <h2 class="event-card-title postponed">${event.eventName}</h2>
+    <h2 class="event-card-title ${event.state}">${event.eventName}</h2>
     <ul class="event-card-list">
       <li class="event-card-date">${event.eventDate}</li>
-      <li class="event-card-participants">${event.eventParticipant}</li>
+      <li class="event-card-participants">${event.participants}</li>
     </ul>
     <p class="event-card-info">${event.eventDescription}</p>
   </div>
@@ -33,13 +33,12 @@ function loadAllEvents() {
 
     allEventsContainer.appendChild(eventElement);
   });
+
   if(allEventsContainer.innerHTML != ""){
-    document.getElementById('prev-slide').classList.toggle('active');
-    document.getElementById('next-slide').classList.toggle('active');
+    allEventsContainer.innerHTML += `<button id="prev-slide" class="material-symbols-outlined slide-button">arrow_back_ios</button>
+    <button id="next-slide" class="material-symbols-outlined slide-button">arrow_forward_ios</button>`;
   }
-}
-window.onload = () => {
-  loadAllEvents();
+
 };
 
 function menu (){
