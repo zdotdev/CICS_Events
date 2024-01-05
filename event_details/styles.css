@@ -93,25 +93,78 @@ h6{
     align-items: center;
   }
 
+/* ---main---*/
+.container .box {
+    width: 540px;
+    margin: 50px;
+    display: table;
+}
 
-  /* footer */
-.footer-container{
-    height: fit-content;
+.mainContainer{
+    display: table-row;
+}
+
+.title{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem 1rem;
+}
+.description {
+  display: block;
+  margin-bottom: 3rem;
+  outline-style: double;
+  padding: 1rem;
+  color: aliceblue;
+}
+
+.date{
+  color: aliceblue;
+}
+.organizers, .regisDeadline{
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: right;
+}
+
+
+
+.state{
+  font-weight: bold;
+  margin: 2rem 1rem;
+  color: rgb(30, 255, 0);
+}
+
+.maincontainer{
+    display:inline-block;
+    padding: 10px;
+    margin: auto;
+}
+
+.container_1{
+    background: green;
+    color: white;
+    text-align: justify;
+    padding: 4rem;
+    margin: 3rem;
+    border-radius: 25px;
+}
+
+.container_2{
+    background:hsl(0, 0%, 30%);;
+    text-align: center;
+    margin:auto;
+    padding: 3rem;
+}
+
+
+
+img{
     width: 100%;
-  }
-  .footer-title{
-    font-size: 4rem;
-  }
-  
-  .footer-text-field{
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    align-items: center;
-    padding: 4rem 0rem;
-    background-color: var(--primary-800);
-  }
-  
+    height: 100%;
+    object-fit: cover;
+    
+}
+

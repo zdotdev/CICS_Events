@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const dialog = document.querySelector("#addEvent");
 const showDialogButton = document.querySelector("#addEventBtn");
 const cancelButton = document.querySelector("#cancelButton");
@@ -5,6 +7,9 @@ const saveButton = document.querySelector("#saveButton");
 
 showDialogButton.addEventListener("click", () => {
   dialog.showModal();
+  // Starts with blank form
+  const formFields = dialog.querySelectorAll("input, textarea");
+  formFields.forEach((field) => (field.value = ""));
 });
 
 cancelButton.addEventListener("click", (event) => {
@@ -25,6 +30,18 @@ saveButton.addEventListener("click", (event) => {
     // Assign each key/value pair to the event object
     eventObject[pair[0]] = pair[1];
   }
+  // Determine the state based on the checked radio button
+  let state;
+  if (document.querySelector("#stateCancelled").checked) {
+    state = "cancelled";
+  } else if (document.querySelector("#stateOngoing").checked) {
+    state = "ongoing";
+  } else if (document.querySelector("#stateDone").checked) {
+    state = "done";
+  } else if (document.querySelector("#stateUpcoming").checked) {
+    state = "upcoming";
+  }
+  eventObject.state = state;
 
   // Read the selected image file
   const imageFile = document.querySelector("#image").files[0];
@@ -57,17 +74,25 @@ let events = JSON.parse(localStorage.getItem("events")) || [];
 function loadAllEvents() {
   // Clear the current list of events
   allEventsContainer.innerHTML = "";
-
+  // Sort events by date
+  events.sort((a, b) => new Date(a.eventDate) - new Date(b.eventDate));
   // Loop through all events and add them to the page
   events.forEach(function (event, index) {
-    console.log(event);
     const eventElement = document.createElement("div");
+    eventElement.classList.add("adminEventCard");
     eventElement.innerHTML = `
-    <h2>${event.eventName}</h2>
-    <p>${event.eventDescription}</p>
     <img src="${event.image}" alt="${event.eventName}">
+    <h2>Title: ${event.eventName}</h2>
+    <p>Description: ${event.eventDescription}</p>
+    <p>Date: ${event.eventDate}</p>
+    <p>Location: ${event.location}</p>
+    <p>Participants: ${event.participants}</p>
+    <p>Organizers: ${event.organizers}</p>
+    <p>Registration Deadline: ${event.registrationDeadline}</p>
+    <p>State: ${event.state}</p>
     <button onclick="editEvent(${index})">Edit</button>
-    <button onclick="deleteEvent(${index})">Delete</button>`;
+    <button onclick="deleteEvent(${index})">Delete</button>
+    `;
     allEventsContainer.appendChild(eventElement);
   });
 }
@@ -91,10 +116,41 @@ window.editEvent = function (index) {
   const event = events[index];
 
   // Populate the #editEventForm with the event data
-  document.querySelector("#eventNameEdit").value = event.eventName;
-  document.querySelector("#eventDescriptionEdit").value =
-    event.eventDescription;
-  // Repeat for all other fields...
+  if (event.eventName !== null) {
+    document.querySelector("#eventNameEdit").value = event.eventName;
+  }
+  if (event.eventDescription !== null) {
+    document.querySelector("#eventDescriptionEdit").value =
+      event.eventDescription;
+  }
+  if (event.eventDate !== null) {
+    document.querySelector("#eventDateEdit").value = event.eventDate;
+  }
+  if (event.location !== null) {
+    document.querySelector("#locationEdit").value = event.location;
+  }
+  if (event.participants !== null) {
+    document.querySelector("#participantsEdit").value = event.participants;
+  }
+  if (event.organizers !== null) {
+    document.querySelector("#organizersEdit").value = event.organizers;
+  }
+  if (event.registrationDeadline !== null) {
+    document.querySelector("#registrationDeadlineEdit").value =
+      event.registrationDeadline;
+  }
+  if (event.state === "cancelled") {
+    document.querySelector("#stateCancelledEdit").checked = true;
+  } else if (event.state === "ongoing") {
+    document.querySelector("#stateOngoingEdit").checked = true;
+  } else if (event.state === "done") {
+    document.querySelector("#stateDoneEdit").checked = true;
+  } else if (event.state === "upcoming") {
+    document.querySelector("#stateUpcomingEdit").checked = true;
+  }
+  console.log(event.state);
+  // document.querySelector("#imageEdit").value = event.image;
+  // document.querySelector("#stateEdit").value = event.state;
 
   // Show the #editEvent dialog
   const dialog = document.querySelector("#editEvent");
@@ -147,7 +203,13 @@ window.editEvent = function (index) {
   });
 };
 window.deleteEvent = function (index) {
-  // Remove the event from the array
+  // Ask the user for confirmation
+  if (!confirm("Are you sure you want to delete this event?")) {
+    // If the user clicks "Cancel", exit the function
+    return;
+  }
+
+  // If the user clicks "OK", remove the event from the array
   events.splice(index, 1);
 
   // Update the local storage
