@@ -25,7 +25,7 @@
 
 html,
 body{
-  margin: 0;
+  margin: 0; 
   padding: 0;
   font-size: 15px;
   font-weight: 500;
@@ -67,7 +67,7 @@ h6{
 .navbar{
   display: flex;
   justify-content: space-between;
-  margin: 0 4rem;
+  margin: 0 2rem;
   padding: .8rem 0;
 }
 .navbar > li{
@@ -75,22 +75,8 @@ h6{
 }
 .navbar a{
   color: var(--neutral-100);
-  font-size: 2rem;
-  
 }
-.navbar-img-container{
-  line-height: 0;
-}
-.cics-logo,
-.msc-logo{
-  height: auto;
-  width: 2.8rem;
-  line-height: 0%;
-}
-#menu-button{
-  display: flex;
-  align-items: center;
-}
+
 /* menu */
 .menu-container{
   height: 100vh;
@@ -148,17 +134,6 @@ h6{
 }
 
 /* Hero */
-a.arrow-up{
-  position: fixed;
-  z-index: 3;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--neutral-700);
-  color: var(--neutral-100);
-  opacity: 50%;
-  border-radius: 50%;
-  font-size: 4rem;
-}
 .hero{
   width: 100%;
   height: auto;
@@ -237,6 +212,15 @@ a.arrow-up{
 .hero-intro-content p{
   text-align: justify;
   width: 80%;
+  font-size: 19px;
+  margin-bottom: 20px;
+  
+}
+.hero-intro-content a{
+  color: blue;
+  text-decoration: underline;
+  
+  
 }
 
 /* news and announcements */
@@ -246,6 +230,7 @@ a.arrow-up{
 .news-and-announcement-title{
   font-size: 4rem;
   padding: 2rem 4rem .4rem 4rem;
+  text-align: center;
 }
 
 .news-and-announcement-container{
@@ -258,20 +243,38 @@ a.arrow-up{
 }
 .news-field{
   margin: 0rem 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
 }
-
+.news{
+  width: 600px;
+}
 .news-field-title,
 .announcement-field-title{
   margin-bottom: .8rem;
-  font-size: 2.8rem;
   color: var(--neutral-500);
 }
+.news-field a{
+ color: blue;
+ text-decoration: underline;
+  
 
+}
+.announcement-field p{
+  margin-bottom: 20px;
+  font-size: 16px;
+  
+}
 .announcement-field{
   margin: 0rem 4rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 /* events */
@@ -280,15 +283,14 @@ a.arrow-up{
   padding-bottom: 4rem;
 }
 .clientEvents{
+  display: flex;
   gap: 2rem;
   padding: 0rem 4rem;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  overflow-x: hidden;
 }
 .event-card{
   height: 32rem;
   width: 28rem;
+  background-image: url(/main_page/assets/img/402650413_767803438697506_5375373139063542753_n.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -311,6 +313,7 @@ a.arrow-up{
   font-size: 2.8rem;
   margin: 0rem 1.8rem;
   color: white;
+  text-decoration: underline;
 }
 
 .event-card-info{
@@ -323,40 +326,98 @@ a.arrow-up{
   display: flex;
 }
 
-.event-card-date{
+.event-card-date-and-state{
   margin: 0rem 1.8rem;
   padding-right: 8rem;
   margin-bottom: .4rem;
   color: white;
-}
-.event-card-title.Ongoing::after{
-  content: "•";
-  margin: 0 .8rem;
-  font-weight: 900;
-  color: rgb(255, 191, 0);
-}
-.event-card-title.Postponed::after{
-  content: "•";
-  margin: 0 .8rem;
-  font-weight: 900;
-  color: rgb(255, 0, 0);
-}
-.event-card-title.Done::after{
-  content: "•";
-  margin: 0 .8rem;
-  font-weight: 900;
-  color: rgb(13, 255, 0);
-}
-.event-card-title.Upcoming::after{
-  content: "•";
-  margin: 0 .8rem;
-  font-weight: 900;
-  color: rgb(0, 47, 255);
+  display: flex;
+  justify-content: space-between;
 }
 .event-card-participants{
   padding-bottom: .8rem;
   margin: 0rem 1.8rem;
   color: white;
+}
+
+/* footer */
+.footer-container{
+  height: fit-content;
+  width: 100%;
+ 
+}
+.footer-title{
+  font-size: 4rem;
+  color: white;
+}
+.wave{
+  position: relative;
+}
+.wave img{
+  height: 700px;
+  width: 100%;
+}
+.footer-text-field{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: end;
+  padding: 4rem 0rem;
+  top: 375px;
+  margin-left: -100px;
+  
+}
+.footer-text input{
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+
+
+.social img{
+  margin-top: 3px;
+  width: 50px;
+  height: auto;
+
+  margin-left: -150px;
+  
+}
+
+.footer-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  margin-bottom: 50px;
+}
+
+.vis-mis {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -180px;
+}
+.vis-mis p{
+  color: white;
+}
+.vis-mis h2{
+  color: white;
+}
+.footer-text button{
+  width: 70px;
+  height: 35px;
+  background-color: var(--primary-400);
+  border: none;
+}
+
+/* carousel */
+.clientEvents{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow-x: hidden;
 }
 #next-slide,
 #prev-slide{
@@ -378,23 +439,76 @@ a.arrow-up{
   left: 1.8rem;
 }
 
-/* footer */
-.footer-container{
-  height: fit-content;
-  width: 100%;
-}
-.footer-title{
-  font-size: 4rem;
-}
 
-.footer-text-field{
-  position: absolute;
-  z-index: 1;
+/*off*/
+.pres{
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 100%;
   align-items: center;
-  padding: 4rem 0rem;
-  background-color: var(--primary-800);
+  margin-bottom: 0px;
+}
+.pres img{
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.officers{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px;
+  gap: 30px 0px;
+}
+.officer-prof{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.officer-prof img{
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+.officer-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+  margin-top: 20px;
+}
+
+/* faculty */
+
+.faculty{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px;
+  gap: 30px 0px;
+}
+.faculty-prof{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.faculty-prof img{
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+.faculty-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+  margin-top: 20px;
 }
