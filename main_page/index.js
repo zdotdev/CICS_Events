@@ -36,9 +36,18 @@ function loadAllEvents() {
   
   `;
     // Add a click event listener to the event div
-    addEventListener("click", function () {
-      // Redirect to the event details page with the event index as a query parameter
-      window.location.href = "event_details/index.html?eventIndex=" + index;
+    allEventsContainer.addEventListener("click", function (event) {
+      // Check if the clicked element has the class 'event-card-title'
+      if (event.target.classList.contains("event-card-title")) {
+        // Find the parent 'event-card' div
+        const eventCardDiv = event.target.closest(".event-card");
+    
+        // Get the index attribute from the parent 'event-card' div
+        const eventIndex = eventCardDiv.dataset.index;
+    
+        // Redirect to the event details page with the event index as a query parameter
+        window.location.href = "event_details/index.html?eventIndex=" + eventIndex;
+      }
     });
 
     eventElement.appendChild(eventCardDiv);

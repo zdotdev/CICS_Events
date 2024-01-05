@@ -243,7 +243,6 @@ h6{
 .news-and-announcement-title{
   font-size: 4rem;
   padding: 2rem 4rem .4rem 4rem;
-  text-align: center;
 }
 
 .news-and-announcement-container{
@@ -326,7 +325,7 @@ h6{
   font-size: 2.8rem;
   margin: 0rem 1.8rem;
   color: white;
-  text-decoration: underline;
+  cursor: pointer;
 }
 
 .event-card-info{
@@ -369,6 +368,7 @@ h6{
 .wave img{
   height: 700px;
   width: 100%;
+  background-color: var(--neutral-100);
 }
 .footer-text-field{
   position: absolute;
@@ -503,8 +503,11 @@ h6{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 50px 0px;
+  padding: 50px 0px;
   gap: 30px 0px;
+}
+.faculty-container{
+  background-color: var(--neutral-100);
 }
 .faculty-prof{
   width: 270px;
