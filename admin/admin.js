@@ -1,4 +1,4 @@
-import "./styles.css";
+// import "./styles.css";
 
 const dialog = document.querySelector("#addEvent");
 const showDialogButton = document.querySelector("#addEventBtn");
