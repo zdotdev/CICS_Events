@@ -352,6 +352,86 @@ h6{
   margin: 0rem 1.8rem;
   color: white;
 }
+
+/* footer */
+.footer-container{
+  height: fit-content;
+  width: 100%;
+ 
+}
+.footer-title{
+  font-size: 4rem;
+  color: white;
+}
+.wave{
+  position: relative;
+}
+.wave img{
+  height: 700px;
+  width: 100%;
+}
+.footer-text-field{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: end;
+  padding: 4rem 0rem;
+  top: 375px;
+  margin-left: -100px;
+  
+}
+.footer-text input{
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+
+
+.social img{
+  margin-top: 3px;
+  width: 50px;
+  height: auto;
+
+  margin-left: -150px;
+  
+}
+
+.footer-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  margin-bottom: 50px;
+}
+
+.vis-mis {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -180px;
+}
+.vis-mis p{
+  color: white;
+}
+.vis-mis h2{
+  color: white;
+}
+.footer-text button{
+  width: 70px;
+  height: 35px;
+  background-color: var(--primary-400);
+  border: none;
+}
+
+/* carousel */
+.clientEvents{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow-x: hidden;
+}
 #next-slide,
 #prev-slide{
   position: absolute;
@@ -399,9 +479,49 @@ h6{
   width: 270px;
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 100%;
   align-items: center;
-  padding: 4rem 0rem;
-  background-color: var(--primary-800);
+
+}
+.officer-prof img{
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+.officer-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+  margin-top: 20px;
+}
+
+/* faculty */
+
+.faculty{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0px;
+  gap: 30px 0px;
+}
+.faculty-prof{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.faculty-prof img{
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+.faculty-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+  margin-top: 20px;
 }
