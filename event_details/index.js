@@ -1,4 +1,4 @@
-import "./style.css";
+// import "./style.css";
 // Parse the URL to get the event index
 const urlParams = new URLSearchParams(window.location.search);
 const eventIndex = parseInt(urlParams.get("eventIndex"));
