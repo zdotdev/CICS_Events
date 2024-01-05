@@ -18,6 +18,7 @@ if (userEvent) {
         <h3 class="state">Status:<span class="stateColor">${userEvent.state}</span></h3>
         <h3 class="date">Date: ${userEvent.eventDate}</h3>
       </div>
+      
       <div class="container_2">
         <p class="description">${userEvent.eventDescription}</p>
         <h3 class="organizers">Organizers: ${userEvent.organizer}</h3>
@@ -26,11 +27,10 @@ if (userEvent) {
         
       </div>
 
-    </main>
+      </main>
+
  `;
 
-
- 
   // Insert the event details HTML into the page
   document.getElementById("clientEventsDetails").innerHTML = eventDetailsHtml;
 } else {
