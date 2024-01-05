@@ -111,13 +111,14 @@ input:focus{
   width: 20vw;
   background-color: var(--primary-400);
   position: fixed;
-  top: 0;
+  top: 0px;
   right: -30rem;
   z-index: 3;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   transition: 300ms;
+  overflow: scroll;
 }
 .menu-container.active{
   right: 0;
@@ -127,9 +128,12 @@ input:focus{
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
-  margin-bottom: 4rem;
-  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--neutral-700);
+}
+.tips{
+  margin-bottom: 50px;
 }
 .menu li{
   display: flex;
@@ -162,17 +166,6 @@ input:focus{
 }
 
 /* Hero */
-a.arrow-up{
-  position: fixed;
-  z-index: 3;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--neutral-700);
-  color: var(--neutral-100);
-  opacity: 50%;
-  border-radius: 50%;
-  font-size: 4rem;
-}
 .hero{
   width: 100%;
   height: auto;
@@ -409,80 +402,6 @@ a.arrow-up{
   color: white;
 }
 
-/* footer */
-.footer-container{
-  height: fit-content;
-  width: 100%;
- 
-}
-.footer-title{
-  font-size: 4rem;
-  color: white;
-}
-.wave{
-  position: relative;
-}
-.wave img{
-  height: 700px;
-  width: 100%;
-  background-color: var(--neutral-100);
-}
-.footer-text-field{
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 100%;
-  align-items: end;
-  padding: 4rem 0rem;
-  top: 375px;
-  margin-left: -100px;
-  
-}
-.footer-text input{
-  width: 300px;
-  height: 30px;
-  margin-top: 10px;
-}
-
-
-
-.social img{
-  margin-top: 3px;
-  width: 50px;
-  height: auto;
-  background: none;
-  margin-left: -150px;
-  
-}
-
-.footer-flex{
-  display: flex;
-  flex-direction: row;
-  gap: 200px;
-  margin-bottom: 50px;
-}
-
-.vis-mis {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  margin-top: -180px;
-}
-.vis-mis p{
-  color: white;
-}
-.vis-mis h2{
-  color: white;
-}
-.footer-text button{
-  width: 70px;
-  height: 35px;
-  background-color: var(--primary-400);
-  border: none;
-}
-
 /* carousel */
 .clientEvents{
   display: grid;
@@ -510,7 +429,7 @@ a.arrow-up{
 }
 
 
-/*off*/
+/*officers*/
 .pres{
   display: flex;
   flex-direction: column;
@@ -584,4 +503,80 @@ a.arrow-up{
   text-align: center;
   width: 250px;
   margin-top: 20px;
+}
+
+/* footer */
+.footer-container{
+  height: fit-content;
+  width: 100%;
+ 
+}
+.footer-title{
+  font-size: 3.5rem;
+  color: white;
+  
+}
+.wave{
+  position: relative;
+}
+.wave img{
+  height: 700px;
+  width: 100%;
+  background-color: var(--neutral-100);
+}
+.footer-text-field{
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: end;
+  padding: 4rem 0rem;
+  top: 360px;
+  margin-left: -100px;
+  
+}
+.footer-text input{
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.social img{
+  margin-top: 3px;
+  width: 50px;
+  height: auto;
+  background: none;
+  margin-left: -110px;
+  
+}
+
+.footer-flex{
+  display: flex;
+  flex-direction: row;
+  gap: 9rem;
+  margin-bottom: 50px;
+
+}
+
+.vis-mis {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -170px;
+  margin-left: 4rem;
+}
+.vis-mis p{
+  color: white;
+}
+.vis-mis h2{
+  color: white;
+}
+
+.footer-text button{
+  width: 70px;
+  height: 35px;
+  background-color: var(--primary-400);
+  border: none;
 }
