@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+   <!-- Meta tags for character set, favicon, viewport, and title -->
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CICS Events</title>
+  <!-- Linking external stylesheets and fonts -->
   <link rel="stylesheet" href="main_page/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,22 +16,29 @@
 </head>
 
 <body id="body">
+  <!-- Header Section -->
   <header>
+    <!-- Navbar Container -->
     <div class="navbar-container">
+       <!-- Navbar with logos and menu button -->
       <ul class="navbar">
         <li><a href="#" class="navbar-msc-logo"><img src="main_page/assets/img/241740719_6390128531005131_3622162363674167384_n.png" alt="MSC Logo"></a></li>
         <li><a href="#" class="navbar-cics-logo"><img src="main_page/assets/img/376845219_1282982183097010_7071839954297073422_n.png" alt="CICS Logo"></a></li>
         <li><a href="#" class="material-symbols-outlined" id="menu-button">Menu</a></li>
       </ul>
     </div>
+      <!-- Mobile Menu Container -->
     <div class="menu-container" id="menu-container-field">
+      <!-- Close button for the mobile menu -->
       <a class="material-symbols-outlined" id="close-button">Close</a>
+       <!-- Menu Items -->
       <ul class="menu">
         <li><a href="#news-and-announcements-container" id="news-and-announcement-menu-button">News and Announcements</a></li>
         <li><a href="#events-container" id="events-menu-button">Events</a></li>
         <li><a href="#cicsso-officers-container" id="cicsso-officers-menu-button">CICSSO officers</a></li>
         <li><a href="#faculty-container" id="faculty-menu-button">Faculty</a></li>
       </ul>
+         <!-- Quick Tips Section -->
       <p class="tips">
         <strong>Tips!</strong><br><br>
         <strong>Stay Updated: </strong>Check our website for the latest news and announcements. <br><br>
@@ -37,12 +46,18 @@
         <strong>Feedback Matters: </strong>Share your suggestions with us to help improve your experience.
       </p>
     </div>
+    <!-- Background Cover for the mobile menu -->
     <div class="background-cover" id="background-cover-field"></div>
   </header>
+   <!-- Main Section -->
   <main>
+       <!-- Scroll to Top Button -->
     <a href="#header" class="material-symbols-outlined arrow-up">expand_less</a>
+     <!-- Hero Section -->
     <section class="hero">
+       <!-- Event Information -->
       <div class="event-info">
+         <!-- Show Events Button -->
         <div class="hero-buttons">
           <span class="show-events-button"><a href="#">Show Events</a></span>
         </div>
@@ -50,11 +65,13 @@
         <h2>Latest updates for the month of <span id="show-month"></span></h2>
         <p>By: <span>BSIT 3D</span></p>
       </div>
+      <!-- Event Images -->
       <div class="event-images">
        
         <img src="main_page/assets/img/391650274_122127403490030941_1011572986182107192_n.jpg" alt="CICS Event Image" id="hero-event-image">
       </div>
     </section>
+     <!-- Hero Intro Content -->
     <section class="hero-intro-content">
       
       <h2 class="hero-intro-content-title">ATTENTION, CICS STUDENTS OF 1ST SEMESTER, AY 2023-2024</h2>
@@ -62,11 +79,13 @@
         NOTE: This copy is for CICS students ONLY, enrolled in the 1st Semester of AY 2023-2024. <a href="https://bit.ly/ClearanceCICS1stSemAY2324">Click here for more...</a>
         </p>
     </section>
-
+    <!-- News and Announcements Section -->
     <section class="news-and-announcement-container" id="news-and-announcements-container">
       <h2 class="news-and-announcement-title">News and Announcements</h2>
       <div class="content-container">
+        <!-- News Field -->
         <div class="news-field">
+          <!-- News Items -->
           <div class="news">
           <h2 class="news-field-title">Island innovation wraps up its Ambassadors program</h2>
           <p>
@@ -104,8 +123,9 @@
                 </a>
               </div>
         </div>
-        
+         <!-- Announcement Field -->
         <div class="announcement-field">
+          <!-- Announcements -->
           <h2 class="announcement-field-title"> DATES TO REMEMBER BEFORE THE START OF 2ND SEMESTER OF AY 2023-2024 (as per approved MSC BOT Res. No. 66, s. 2023)</h2>
           <p>>January 15-19, 2024 - Filing of Letter of Request for Special/Petition Class <br>
             >January 22-26, 2024 - Evaluation Period <br>
@@ -119,15 +139,16 @@
         </div>
       </div>
     </section>
-
+     <!-- Events Section -->
     <section class="events-container" id="events-container">
       <h2 class="events-title">Events</h2>
       <div class="clientEvents" id="clientEvents">
       </div>
     </section>
-
+     <!-- CICSSO Officers Section -->
     <section class="cicsso-officers-container" id="cicsso-officers-container">
       <h2 class="cicsso-officers-title">CICSSO Officers</h2>
+        <!-- President Information -->
       <div class="pres">
         <img src="CICSSO/president.jpg" alt="">
         <div class="officer-info">
@@ -135,6 +156,7 @@
           <h4>Jospher Luha </h4>
         </div>
       </div>
+        <!-- Other Officers information -->
       <div class="officers">
       <div class="officer-prof">
         <img src="CICSSO/vp.jpg" alt="">
@@ -223,10 +245,11 @@
       </div>
     </div>
     </section>
-
+    <!-- Faculty Section -->
     <section class="faculty-container" id="faculty-container">
       <h2 class="faculty-title">Faculty</h2>
       <div class="faculty">
+         <!-- Faculty Profiles -->
         <div class="faculty-prof">
           <img src="main_page/assets/img/SirRonjs.jpg" alt="">
           <div class="faculty-info">
@@ -244,10 +267,14 @@
       </div>
     </section>
   </main>
+    <!-- Footer Section -->
   <footer class="footer-container">
     <div class="wave">
+       <!-- Footer Image -->
     <img src="main_page/assets/img/alons.png" alt="">
+    <!-- Footer Text Field -->
     <div class="footer-text-field">
+      <!-- Footer Title and Vision/Mission -->
       <h2 class="footer-title">MSC CICS Department</h2>
       <div class="footer-flex">
         <div class="vis-mis">
@@ -256,6 +283,7 @@
           <h2>Mission</h2>
         <p>Mission To provide excellence in instruction, research, extension, and production that magnifies W.I.S.D.O.M. in leadership through a total quality management system responsive to the challenges of 21th century education.</p>
       </div>
+       <!-- Footer Text Input and Social Media Links -->
       <div class="footer-text">
        <input type="text">
        <a href="mailto:msc.cicsoboac@gmail.com">
@@ -277,7 +305,7 @@
 </div>
 
   </footer>
-
+ <!-- JavaScript Module -->
   <script type="module" src="main_page/index.js"></script>
 </body>
 

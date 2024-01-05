@@ -1,18 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character set, viewport, and title -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
   <body>
+    <!-- Navigation link to the client page -->
     <a href="/">go to client</a>
-
+     <!-- Navigation Bar Section -->
     <nav>Navigation Bar here</nav>
+    <!-- Hero Section -->
     <section class="hero-section">Hero section here</section>
+    
+  <!-- Add Event Dialog -->
     <dialog id="addEvent">
       <form id="eventForm">
+        <!-- Form fields for adding a new event -->
+      <!-- ... (input fields, labels, and buttons) ... -->
         <label for="eventName">Event Name:</label><br />
         <input type="text" id="eventName" name="eventName" /><br />
         <label for="eventDescription">Event Description:</label><br />
@@ -70,13 +77,17 @@
         <button type="submit" id="saveButton">Save</button>
       </form>
     </dialog>
-
+ <!-- Button to open the Add Event Dialog -->
     <button id="addEventBtn">Add Event</button>
+    <!-- Heading for all events -->
     <h1>All Events</h1>
+     <!-- Container to display all events -->
     <div id="allEvents"></div>
-
+     <!-- Edit Event Dialog -->
     <dialog id="editEvent">
       <form id="editEventForm">
+      <!-- Form fields for editing an existing event -->
+      <!-- ... (input fields, labels, and buttons) ... -->
         <label for="eventName">Event Name:</label><br />
         <input type="text" id="eventNameEdit" name="eventName" /><br />
         <label for="eventDescription">Event Description:</label><br />
@@ -140,6 +151,7 @@
         <button type="submit" id="saveButtonEdit">Save</button>
       </form>
     </dialog>
+    <!-- JavaScript module for handling admin functionality -->
     <script type="module" src="admin.js"></script>
   </body>
 </html>
