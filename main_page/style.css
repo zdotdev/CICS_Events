@@ -55,7 +55,22 @@ h6{
   margin: 0;
   padding: 0;
 }
-
+button{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--neutral-900);
+  border-radius: 4px;
+  border: none;
+}
+input{
+  border-radius: 4px;
+  margin: 0;
+  border: none;
+  padding: 2px 4px;
+}
+input:focus{
+  outline: none;
+}
 /* Start */
 
 /* navbar */
@@ -230,10 +245,8 @@ h6{
   
 }
 .hero-intro-content a{
-  color: blue;
-  text-decoration: underline;
-  
-  
+  color: var(--neutral-900);
+  font-weight: 700;
 }
 
 /* news and announcements */
@@ -242,7 +255,7 @@ h6{
 .events-title,
 .news-and-announcement-title{
   font-size: 4rem;
-  padding: 2rem 4rem .4rem 4rem;
+  padding: 2rem 4rem 2rem 4rem;
 }
 
 .news-and-announcement-container{
@@ -250,43 +263,49 @@ h6{
 }
 .content-container{
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
 }
 .news-field{
   margin: 0rem 4rem;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 100px;
+  flex-direction: column;
+  gap: 2.8rem;
   justify-content: center;
 }
 .news{
-  width: 600px;
+  background-color: var(--neutral-100);
+  width: 100%;
+  padding-bottom: 1rem;
+  border-left: 8px solid var(--primary-500);
+  border-radius: 4px;
 }
-.news-field-title,
+.news p{
+  padding: 1rem;
+}
+.news-field-title{
+  color: var(--neutral-700);
+  font-size: 1.8rem;
+  padding: 1rem 1rem 0rem 1rem;
+}
 .announcement-field-title{
   margin-bottom: .8rem;
-  color: var(--neutral-500);
+  color: var(--neutral-700);
+  font-size: 1.8rem;
 }
 .news-field a{
- color: blue;
- text-decoration: underline;
-  
-
+ color: var(--neutral-900);
+ font-weight: 700;
+ padding: 1rem;
 }
 .announcement-field p{
   margin-bottom: 20px;
   font-size: 16px;
-  
 }
 .announcement-field{
-  margin: 0rem 4rem;
+  margin: 0rem 4rem 0 0;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
- 
+  background-color: var(--secondary-500);
 }
 
 /* events */
@@ -326,8 +345,35 @@ h6{
   margin: 0rem 1.8rem;
   color: white;
   cursor: pointer;
+  width: fit-content;
 }
-
+.event-card-title:hover{
+  color: var(--neutral-300);
+}
+.event-card-title.ongoing::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(255, 191, 0);
+}
+.event-card-title.postponed::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(255, 0, 0);
+}
+.event-card-title.done::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(13, 255, 0);
+}
+.event-card-title.upcoming::after{
+  content: "•";
+  margin: 0 .8rem;
+  font-weight: 900;
+  color: rgb(0, 47, 255);
+}
 .event-card-info{
   margin: 0rem 1.8rem;
   padding-bottom: 1.8rem;
@@ -395,7 +441,7 @@ h6{
   margin-top: 3px;
   width: 50px;
   height: auto;
-
+  background: none;
   margin-left: -150px;
   
 }
