@@ -11,19 +11,21 @@ console.log(userEvent.eventName);
 if (userEvent) {
   // Create the event details HTML
   const eventDetailsHtml = `
-   <h2 class="title">${userEvent.eventName}</h2>
-   <div class="container_1">
-   <p id="description">${userEvent.eventDescription}</p>
-   <h3 class="date">${userEvent.eventDate}<h3>
-   </div>
-   
-   <div class="container_2">
-        <p class="participants">${userEvent.participants}</p>
-        <h3 class="organizers">${userEvent.organizer}</h3>
-        <p class="regisDeadline">${userEvent.eventDate}</p>
-        <img src="${userEvent.image}" alt="Event Img" id="hero-event-image">
-        <h3 class="state">${userEvent.state}</h3>
-      </div>
+  <div class="image-container">
+  <img src="${userEvent.image}" alt="Event Img" id="hero-event-image">
+</div>
+<h2 class="title">${userEvent.eventName}</h2>
+
+<div class="container_1">
+  <p id="description">${userEvent.eventDescription}</p>
+</div>
+<div class="container_2">
+  <strong class="date">${userEvent.eventDate}</strong>
+  <strong class="participants">${userEvent.participants}</strong>
+  <strong class="organizers">${userEvent.organizer}</strong>
+  <strong class="regisDeadline">${userEvent.eventDate}</strong>
+  <strong class="state ${userEvent.state}">${userEvent.state}</strong>
+</div>
  `;
 
   // Insert the event details HTML into the page

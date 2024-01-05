@@ -361,25 +361,25 @@ a.arrow-up{
 .event-card-title:hover{
   color: var(--neutral-300);
 }
-.event-card-title.ongoing::after{
+.event-card-title.Ongoing::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
   color: rgb(255, 191, 0);
 }
-.event-card-title.postponed::after{
+.event-card-title.Postponed::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
   color: rgb(255, 0, 0);
 }
-.event-card-title.done::after{
+.event-card-title.Done::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
   color: rgb(13, 255, 0);
 }
-.event-card-title.upcoming::after{
+.event-card-title.Upcoming::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
