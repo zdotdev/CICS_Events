@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
   <body>
     <a href="/">go to client</a>
 
+    <nav>Navigation Bar here</nav>
+    <section class="hero-section">Hero section here</section>
     <dialog id="addEvent">
       <form id="eventForm">
         <label for="eventName">Event Name:</label><br />
@@ -30,8 +32,14 @@
           id="registrationDeadline"
           name="registrationDeadline"
         /><br />
-        <label for="image">Image:</label><br />
-        <input type="file" id="image" name="image" accept="image/*" /><br />
+        <label for="image">Image (REQUIRED):</label><br />
+        <input
+          type="file"
+          id="image"
+          name="image"
+          accept="image/*"
+          required
+        /><br />
         <input
           type="hidden"
           id="archived"
@@ -39,7 +47,25 @@
           value="false"
         /><br />
         <label for="state">State:</label><br />
-        <input type="text" id="state" name="state" /><br />
+        <input
+          type="radio"
+          id="stateCancelled"
+          name="state"
+          value="cancelled"
+        />
+        Cancelled<br />
+        <input type="radio" id="stateOngoing" name="state" value="ongoing" />
+        Ongoing<br />
+        <input type="radio" id="stateDone" name="state" value="done" />
+        Done<br />
+        <input
+          type="radio"
+          id="stateUpcoming"
+          name="state"
+          value="upcoming"
+          checked
+        />
+        Upcoming<br />
         <button id="cancelButton">Cancel</button>
         <button type="submit" id="saveButton">Save</button>
       </form>
@@ -70,8 +96,14 @@
           id="registrationDeadlineEdit"
           name="registrationDeadline"
         /><br />
-        <label for="image">Image:</label><br />
-        <input type="file" id="imageEdit" name="image" accept="image/*" /><br />
+        <label for="image">image (REQUIRED):</label><br />
+        <input
+          type="file"
+          id="imageEdit"
+          name="image"
+          accept="image/*"
+          required
+        /><br />
         <input
           type="hidden"
           id="archivedEdit"
@@ -79,7 +111,30 @@
           value="false"
         /><br />
         <label for="state">State:</label><br />
-        <input type="text" id="stateEdit" name="state" /><br />
+        <input
+          type="radio"
+          id="stateCancelledEdit"
+          name="state"
+          value="cancelled"
+        />
+        Cancelled<br />
+        <input
+          type="radio"
+          id="stateOngoingEdit"
+          name="state"
+          value="ongoing"
+        />
+        Ongoing<br />
+        <input type="radio" id="stateDoneEdit" name="state" value="done" />
+        Done<br />
+        <input
+          type="radio"
+          id="stateUpcomingEdit"
+          name="state"
+          value="upcoming"
+          checked
+        />
+        Upcoming<br />
 
         <button id="cancelButtonEdit">Cancel</button>
         <button type="submit" id="saveButtonEdit">Save</button>

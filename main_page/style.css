@@ -67,7 +67,7 @@ h6{
 .navbar{
   display: flex;
   justify-content: space-between;
-  margin: 0 4rem;
+  margin: 0 2rem;
   padding: .8rem 0;
 }
 .navbar > li{
@@ -311,6 +311,7 @@ a.arrow-up{
   font-size: 2.8rem;
   margin: 0rem 1.8rem;
   color: white;
+  cursor: pointer;
 }
 
 .event-card-info{
@@ -329,25 +330,25 @@ a.arrow-up{
   margin-bottom: .4rem;
   color: white;
 }
-.event-card-title.Ongoing::after{
+.event-card-title.ongoing::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
   color: rgb(255, 191, 0);
 }
-.event-card-title.Postponed::after{
+.event-card-title.postponed::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
   color: rgb(255, 0, 0);
 }
-.event-card-title.Done::after{
+.event-card-title.done::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
   color: rgb(13, 255, 0);
 }
-.event-card-title.Upcoming::after{
+.event-card-title.upcoming::after{
   content: "•";
   margin: 0 .8rem;
   font-weight: 900;
