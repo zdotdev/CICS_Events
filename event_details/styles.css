@@ -138,11 +138,11 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 .state{
 font-weight: bold;
 margin: 2rem 1rem;
-color: rgb(255, 255, 255);
+color: #ffffff;
 text-align: right;
 }
 .stateColor{
-  color: rgb(30, 255, 0);
+  color: #1eff00;
   font-weight: bold;
 }
 
@@ -163,7 +163,7 @@ text-align: right;
 }
 
 .container_2{
-  background:hsl(0, 0%, 30%);;
+  background:#00001e;
   text-align: center;
   margin:auto;
   padding: 3rem;
