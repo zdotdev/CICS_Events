@@ -160,9 +160,38 @@ text-align: right;
   padding: 4rem;
   margin: 3rem;
   border-radius: 25px;
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.image-container{
+  background-color: var(--neutral-100);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#hero-event-image{
+  display: flex;
+  width: 60rem;
+  height: 40rem;
+}
+
+.title{
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.container_1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 .container_2{
+
   background:hsl(0, 0%, 30%);;
   text-align: center;
   margin:auto;
@@ -174,4 +203,35 @@ img{
   height: 100%;
   object-fit: cover;
   
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+}
+
+.state.Ongoing::after{
+  content: "•";
+  margin: 0 .4rem;
+  font-weight: 900;
+  color: rgb(255, 191, 0);
+}
+.state.Postponed::after{
+  content: "•";
+  margin: 0 .4rem;
+  font-weight: 900;
+  color: rgb(255, 0, 0);
+}
+.state.Done::after{
+  content: "•";
+  margin: 0 .4rem;
+  font-weight: 900;
+  color: rgb(13, 255, 0);
+}
+.state.Upcoming::after{
+  content: "•";
+  margin: 0 .4rem;
+  font-weight: 900;
+  color: rgb(0, 47, 255);
+
 }

@@ -11,7 +11,6 @@ console.log(userEvent.eventName);
 if (userEvent) {
   // Create the event details HTML
   const eventDetailsHtml = `
-
       <main class="mainContainer" id="clientEventsDetails">
       <div class="container_1">
         <img src="${userEvent.image}" alt="Event Img" id="hero-event-image">
@@ -28,9 +27,6 @@ if (userEvent) {
       </div>
 
     </main>
-
-
-
  `;
 
 

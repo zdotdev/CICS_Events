@@ -33,13 +33,13 @@ saveButton.addEventListener("click", (event) => {
   // Determine the state based on the checked radio button
   let state;
   if (document.querySelector("#stateCancelled").checked) {
-    state = "cancelled";
+    state = "Cancelled";
   } else if (document.querySelector("#stateOngoing").checked) {
-    state = "ongoing";
+    state = "Ongoing";
   } else if (document.querySelector("#stateDone").checked) {
-    state = "done";
+    state = "Done";
   } else if (document.querySelector("#stateUpcoming").checked) {
-    state = "upcoming";
+    state = "Upcoming";
   }
   eventObject.state = state;
 
