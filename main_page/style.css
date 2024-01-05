@@ -162,6 +162,17 @@ input:focus{
 }
 
 /* Hero */
+a.arrow-up{
+  position: fixed;
+  z-index: 3;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--neutral-700);
+  color: var(--neutral-100);
+  opacity: 50%;
+  border-radius: 50%;
+  font-size: 4rem;
+}
 .hero{
   width: 100%;
   height: auto;
