@@ -1,0 +1,9 @@
+/*  YOU CAN MODIFY AND APPLY YOUR DESIGN IN: admin/index.html and admin/admin.js line: 81*/
+
+.adminEventCard {
+  background: red;
+  padding: 10px;
+}
+.adminEventCard h2 {
+  color: green;
+}
